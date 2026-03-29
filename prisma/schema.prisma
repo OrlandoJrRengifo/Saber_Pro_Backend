@@ -1,8 +1,18 @@
 generator client {
-  provider = "prisma-client"
-  output   = "../generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "postgresql"
+}
+
+model User {
+  id        String   @id
+  email     String   @unique
+  nombre    String
+  apellido  String
+  carrera   String
+  semestre  Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

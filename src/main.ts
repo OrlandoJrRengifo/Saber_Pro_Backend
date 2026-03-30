@@ -10,8 +10,6 @@ async function bootstrap() {
     .setTitle('Saber Pro API')
     .setDescription('Documentacion de la API para la preparación de pruebas SABER PRO')
     .setVersion('1.0')
-    .addTag('questions')
-    .addTag('attempts')
     .build();
     
   const document = SwaggerModule.createDocument(app, config);

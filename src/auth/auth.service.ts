@@ -9,8 +9,6 @@ export class AuthService {
     private supabase: SupabaseClient;
 
     constructor(private prisma: PrismaService) {
-        console.log('URL actual:', process.env.SUPABASE_URL);
-        console.log('Key actual:', process.env.SUPABASE_ANON_KEY?.substring(0, 10) + '...');
 
         this.supabase = createClient(
             process.env.SUPABASE_URL!,
